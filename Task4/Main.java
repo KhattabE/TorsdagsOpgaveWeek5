@@ -12,11 +12,33 @@ class Main{
 	actions.add("3) Pause game");
 	actions.add("4) End game");
 
-	GameMenu gameMenus = new GameMenu(actions);
+	GameMenu gameMenu = new GameMenu(actions);
 
-	gameMenus.displayMenu();
+	
+	int userChoice = Integer.parseInt(gameMenu.promptUser());
+	doAction(userChoice);
 
 
+
+
+	}
+	
+
+
+
+	public static void doAction(int action){
+
+		switch(action){
+
+		case 1 -> System.out.println("Starting the game now");
+
+		case 2 -> System.out.println("Fetching previously saved game data");
+
+		case 3 -> System.out.println("Game paused");
+
+		case 4 -> System.out.println("Ending game");
+
+		}
 
 	}
 
